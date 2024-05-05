@@ -23,9 +23,6 @@ public class UpdateTest {
     @DisplayName("TC3-06 Melakukan update user pada field title diisi \"mr\"")
     public void updateTitleMrWithValidUserIdAndAppId() {
         
-        String userId = "663068bc22f582dd9b5e428c";
-        String appId = "662e60f6bb70a70a3a2595fd";
-        
         given()
             .contentType(ContentType.JSON)
             .header("app-id", appId)

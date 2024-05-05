@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.apitesting.CreateTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.854 s <<< FAILURE! - in com.apitesting.CreateTest
+createUserWithRequiredFieldsAndValidEmailFormat(com.apitesting.CreateTest)  Time elapsed: 0.378 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at com.apitesting.CreateTest.createUserWithRequiredFieldsAndValidEmailFormat(CreateTest.java:69)
+

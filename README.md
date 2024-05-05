@@ -5,8 +5,10 @@ Pengujian API menggunakan Postman (manual) dan Rest Assured (otomatis) pada Prog
 ## Tentang Project API Testing
 
 ### Class
-- **DeleteTest**: Class ini merupakan class pengujian untuk menguji request DELETE user pada API.
-- **GetTest**: Class ini merupakan class pengujian untuk menguji request GET user pada API.
+- **CreateTest**: Class ini merupakan class pengujian untuk menguji request create data user pada API.
+- **GetTest**: Class ini merupakan class pengujian untuk menguji request read data user berdasarkan id pada API.
+- **UpdateTest**: Class ini merupakan class pengujian untuk menguji request update data user berdasarkan id pada API.
+- **DeleteTest**: Class ini merupakan class pengujian untuk menguji request delete data user berdasarkan id pada API.
 
 ## Directory Tree Project
 ```
@@ -18,8 +20,10 @@ Pengujian API menggunakan Postman (manual) dan Rest Assured (otomatis) pada Prog
 │       └── java
 │           └── com
 │               └── apitesting
+│                   ├── CreateTest.java
 │                   ├── DeleteTest.java
-│                   └── GetTest.java
+│                   ├── GetTest.java
+│                   └── UpdateTest.java
 ├── target
 │   ├── classes/com/apitesting
 │   │   └── ....
@@ -46,16 +50,18 @@ Pengujian API menggunakan Postman (manual) dan Rest Assured (otomatis) pada Prog
 1. **src:** Ini adalah direktori sumber (source) utama yang berisi kode sumber aplikasi.
 2. **main\java\com\apitesting:** Ini adalah direktori di mana kode sumber utama (production code) dari aplikasi ditempatkan.
 3. **test\java\com\apitesting:** Ini adalah direktori di mana kode sumber pengujian (test code) dari aplikasi ditempatkan.
-7. **DeleteTest.java:** Ini berisi pengujian untuk method DELETE.
-8. **GetTest.java:** Ini berisi pengujian untuk method GET.
-10. **target:** Ini adalah direktori yang berisi hasil dari proses kompilasi dan pembuatan (build) lainnya.
-11. **classes/com/apitesting:** Direktori tempat hasil kompilasi dari kode sumber utama ditempatkan.
-12. **generated-sources:** Direktori untuk sumber yang dihasilkan, mungkin oleh proses generasi kode.
-13. **generated-test-sources:** Direktori untuk sumber pengujian yang dihasilkan.
-14. **maven-status/maven-compiler-plugin:** Direktori yang berisi informasi status proyek yang dihasilkan oleh Maven.
-15. **site:** Direktori yang berisi laporan dan sumber daya lainnya yang dihasilkan oleh plugin Maven yang berorientasi laporan.
-16. **surefire-reports:** Direktori yang berisi laporan hasil pengujian yang dihasilkan oleh Surefire plugin.
-17. **pom.xml:** Ini adalah berkas POM (Project Object Model) Maven yang berisi konfigurasi proyek, dependensi, dan informasi lainnya yang diperlukan oleh Maven untuk membangun proyek.
+7. **CreateTest.java:** Ini berisi pengujian untuk method POST.
+8. **DeleteTest.java:** Ini berisi pengujian untuk method DELETE.
+9. **GetTest.java:** Ini berisi pengujian untuk method GET.
+10. **UpdateTest.java:** Ini berisi pengujian untuk method PUT.
+11. **target:** Ini adalah direktori yang berisi hasil dari proses kompilasi dan pembuatan (build) lainnya.
+12. **classes/com/apitesting:** Direktori tempat hasil kompilasi dari kode sumber utama ditempatkan.
+13. **generated-sources:** Direktori untuk sumber yang dihasilkan, mungkin oleh proses generasi kode.
+14. **generated-test-sources:** Direktori untuk sumber pengujian yang dihasilkan.
+15. **maven-status/maven-compiler-plugin:** Direktori yang berisi informasi status proyek yang dihasilkan oleh Maven.
+16. **site:** Direktori yang berisi laporan dan sumber daya lainnya yang dihasilkan oleh plugin Maven yang berorientasi laporan.
+17. **surefire-reports:** Direktori yang berisi laporan hasil pengujian yang dihasilkan oleh Surefire plugin.
+18. **pom.xml:** Ini adalah berkas POM (Project Object Model) Maven yang berisi konfigurasi proyek, dependensi, dan informasi lainnya yang diperlukan oleh Maven untuk membangun proyek.
 
 ## Prerequisites
 
@@ -94,7 +100,17 @@ Jalankan command ini untuk generate report dengan maven
 ```
 ..\target\site\surefire-report.html
 ```
+### Hasil Test Report 
+**1. Summary**
+![reposrt](https://github.com/suciawalia/API-Testing/assets/99374578/229a4d0f-e748-4890-8e36-0325d0d6bcc6)
 
+- Jumlah test case yang dieksekusi (Tests) adalah 21
+- Jumlah error pada test case (Errors) adalah 0
+- Jumlah test case yang fail (Failures) adalah 3
+- Jumlah test case yang dilewati (Skipped) adalah 0
+- Success Rate nya adalah 85.7%
+- Waktu eksekusi test nya (Time) nya adalah 14.67s
+  
 ## Authors
 - 211524001 | Adinda Faayza Malika [@adindafaayza](https://github.com/adindafaayza)
 - 211524003 | Annisa Dinda Gantini [@annisaadg](https://github.com/annisaadg)
