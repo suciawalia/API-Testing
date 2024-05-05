@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.apitesting.CreateTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.542 s <<< FAILURE! - in com.apitesting.CreateTest
-createUserWithRequiredFieldsAndValidEmailFormat(com.apitesting.CreateTest)  Time elapsed: 0.441 s  <<< FAILURE!
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 84.23 s <<< FAILURE! - in com.apitesting.CreateTest
+createUserWithRequiredFieldsAndValidEmailFormat(com.apitesting.CreateTest)  Time elapsed: 0.753 s  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
