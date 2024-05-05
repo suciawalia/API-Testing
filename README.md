@@ -100,7 +100,17 @@ Jalankan command ini untuk generate report dengan maven
 ```
 ..\target\site\surefire-report.html
 ```
+### Hasil Test Report 
+**1. Summary**
+![reposrt](https://github.com/suciawalia/API-Testing/assets/99374578/229a4d0f-e748-4890-8e36-0325d0d6bcc6)
 
+- Jumlah test case yang dieksekusi (Tests) adalah 21
+- Jumlah error pada test case (Errors) adalah 0
+- Jumlah test case yang fail (Failures) adalah 3
+- Jumlah test case yang dilewati (Skipped) adalah 0
+- Success Rate nya adalah 85.7%
+- Waktu eksekusi test nya (Time) nya adalah 14.67s
+  
 ## Authors
 - 211524001 | Adinda Faayza Malika [@adindafaayza](https://github.com/adindafaayza)
 - 211524003 | Annisa Dinda Gantini [@annisaadg](https://github.com/annisaadg)
