@@ -14,7 +14,7 @@ public class CreateTest {
     }
 
     @Test
-    @DisplayName ("Request CREATE user tanpa app-id pada headers")
+    @DisplayName ("TC1-01 Melakukan request create user ketika tidak ada app-id pada header")
     public void createUserWithoutAppId() {
 
         given()
@@ -28,7 +28,7 @@ public class CreateTest {
     }
 
     @Test
-    @DisplayName("Request CREATE user dengan app-id yang invalid pada header")
+    @DisplayName("TC1-02 Melakukan request create user ketika memasukkan app-id yang invalid pada header")
     public void createUserWithInvalidAppId() {
 
         given()
@@ -42,7 +42,7 @@ public class CreateTest {
     }
 
     @Test
-    @DisplayName("Request CREATE user dengan gender invalid")
+    @DisplayName("TC1-26 Melakukan request create user dimana field gender invalid (selain \"male\", \"female\", dan \"other\")")
     public void createUserWithInvalidGender() {
 
         given()
@@ -57,7 +57,7 @@ public class CreateTest {
     }
 
     @Test
-    @DisplayName("Request CREATE user dengan data required field dan valid format email")
+    @DisplayName("TC1-05 Melakukan request create user dengan mengisi hanya required field dimana field firstName diisi 50 karakter (batas atas), field lastName diisi 5 karakter, dan field email diisi dengan format yang valid")
     public void createUserWithRequiredFieldsAndValidEmailFormat() {
 
         given()
@@ -73,7 +73,7 @@ public class CreateTest {
     }
 
     @Test
-    @DisplayName("Request CREATE user dengan format email invalid")
+    @DisplayName("TC1-15 Melakukan request create user dengan mengisi hanya required field dimana format email invalid, yaitu tidak memakai '@'")
     public void createUserWithInvalidEmailFormat() {
 
         given()
@@ -87,7 +87,7 @@ public class CreateTest {
     }
     
     @Test
-    @DisplayName("Request CREATE user dengan dateOfBirth di masa depan")
+    @DisplayName("TC1-28 Melakukan request create user dimana field dateOfBirth diisi tanggal di masa depan")
     public void createUserWithFutureDateOfBirth() {
 
         given()
