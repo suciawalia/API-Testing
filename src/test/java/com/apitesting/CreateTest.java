@@ -28,6 +28,20 @@ public class CreateTest {
     }
 
     @Test
+    @DisplayName("Request CREATE user dengan app-id yang invalid pada header")
+    public void createUserWithInvalidAppId() {
+
+        given()
+            .header("app-id", "12345678910")
+            .contentType("application/json")
+            .body("{\"firstName\":\"Heesoo\",\"lastName\":\"Kim\",\"email\":\"heesoo@gmail.com\"}")
+            .post("/user/create").
+        then()
+            .statusCode(403)
+            .body("error", equalTo("APP_ID_NOT_EXIST"));
+    }
+
+    @Test
     @DisplayName("Request CREATE user dengan gender invalid")
     public void createUserWithInvalidGender() {
 
@@ -57,5 +71,33 @@ public class CreateTest {
             .body("lastName", equalTo("Jocie"))
             .body("email", equalTo("aijocie14@gmail.com"));
     }
+
+    @Test
+    @DisplayName("Request CREATE user dengan format email invalid")
+    public void createUserWithInvalidEmailFormat() {
+
+        given()
+            .header("app-id", "662e68fabb70a7086a25966e")
+            .contentType("application/json")
+            .body("{\"firstName\":\"Wonyoung\",\"lastName\":\"Jang\",\"email\":\"wonyounggmail.com\"}")
+            .post("/user/create").
+        then()
+            .statusCode(400)
+            .body("error", equalTo("BODY_NOT_VALID"));
+    }
     
+    @Test
+    @DisplayName("Request CREATE user dengan dateOfBirth di masa depan")
+    public void createUserWithFutureDateOfBirth() {
+
+        given()
+            .header("app-id", "662e68fabb70a7086a25966e")
+            .contentType("application/json")
+            .body("{\"firstName\":\"Soohyun\",\"lastName\":\"Kim\",\"dateOfBirth\":\"1/1/2025\",\"email\":\"kimsoohyun@gmail.com\"}")
+            .post("/user/create").
+        then()
+            .statusCode(400)
+            .body("error", equalTo("BODY_NOT_VALID"));
+    }
+
 }
