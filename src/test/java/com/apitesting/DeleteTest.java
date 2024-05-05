@@ -14,7 +14,7 @@ public class DeleteTest {
     }
 
     @Test
-    @DisplayName ("TC2-02 Request DELETE data id user yang tidak terdaftar pada sistem tanpa menambahkan app-id pada headers")
+    @DisplayName ("TC4-02 Request DELETE data id user yang tidak terdaftar pada sistem tanpa menambahkan app-id pada headers")
     public void deleteInvalidUserIdNoAppId() {
 
         given()
@@ -26,7 +26,7 @@ public class DeleteTest {
     }
 
     @Test
-    @DisplayName ("TC2-04 Request DELETE data id user yang tidak terdaftar pada sistem dengan menambahkan app-id yang salah pada headers")
+    @DisplayName ("TC4-04 Request DELETE data id user yang tidak terdaftar pada sistem dengan menambahkan app-id yang salah pada headers")
     public void deleteInvalidUserIdInvalidAppId() {
 
         String appId = "662ca6cad9ec7557d41a378";
@@ -42,7 +42,7 @@ public class DeleteTest {
     }
 
     @Test
-    @DisplayName ("TC2-05 Request DELETE data id user yang tidak terdaftar pada sistem dengan menambahkan app-id yang valid pada headers")
+    @DisplayName ("TC4-05 Request DELETE data id user yang tidak terdaftar pada sistem dengan menambahkan app-id yang valid pada headers")
     public void deleteInvalidUserIdValidAppId() {
 
         String appId = "662ca6cad9ec7557d41a378a";
@@ -58,7 +58,7 @@ public class DeleteTest {
     }
 
     @Test
-    @DisplayName ("TC2-06 Request DELETE data id user yang terdaftar pada sistem dengan menambahkan app-id yang valid pada headers")
+    @DisplayName ("TC4-06 Request DELETE data id user yang terdaftar pada sistem dengan menambahkan app-id yang valid pada headers")
     public void deleteValidUserIdValidAppId() {
 
         String appId = "662ca6cad9ec7557d41a378a";
@@ -74,7 +74,7 @@ public class DeleteTest {
     }
 
     @Test
-    @DisplayName ("TC2-07 Request DELETE data id user dengan format yang tidak valid dengan menambahkan app-id yang valid pada headers")
+    @DisplayName ("TC4-07 Request DELETE data id user dengan format yang tidak valid dengan menambahkan app-id yang valid pada headers")
     public void deleteInvalidUserIdFormatValidAppId() {
 
         String appId = "662ca6cad9ec7557d41a378a";
