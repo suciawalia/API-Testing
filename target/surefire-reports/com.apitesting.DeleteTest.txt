@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: com.apitesting.DeleteTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.058 s - in com.apitesting.DeleteTest
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.593 s <<< FAILURE! - in com.apitesting.DeleteTest
+deleteValidUserIdValidAppId(com.apitesting.DeleteTest)  Time elapsed: 0.857 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at com.apitesting.DeleteTest.deleteValidUserIdValidAppId(DeleteTest.java:83)
+

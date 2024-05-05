@@ -12,18 +12,6 @@ public class DeleteTest {
     public void setupBaseURL(){
         baseURI = "https://dummyapi.io/data/v1";
     }
- 
-    @Test
-    @DisplayName ("TC2-01 Request DELETE data id user yang terdaftar pada sistem tanpa menambahkan app-id pada headers")
-    public void deleteValidUserIdNoAppId() {
-
-        given()
-            .delete("/user/60d0fe4f5311236168a10a03").
-        then()
-            .statusCode(403)
-            .body("error", equalTo("APP_ID_MISSING"));
- 
-    }
 
     @Test
     @DisplayName ("TC2-02 Request DELETE data id user yang tidak terdaftar pada sistem tanpa menambahkan app-id pada headers")
@@ -67,6 +55,22 @@ public class DeleteTest {
             .statusCode(404)
             .body("error", equalTo("RESOURCE_NOT_FOUND"));
  
+    }
+
+    @Test
+    @DisplayName ("TC2-06 Request DELETE data id user yang terdaftar pada sistem dengan menambahkan app-id yang valid pada headers")
+    public void deleteValidUserIdValidAppId() {
+
+        String appId = "662ca6cad9ec7557d41a378a";
+
+        given()
+            .header("app-id", appId)
+            .when()
+            .delete("/user/60d0fe4f5311236168a10a03").
+        then()
+            .statusCode(200)
+            .body("id", equalTo("60d0fe4f5311236168a10a03"));
+
     }
 
     @Test
