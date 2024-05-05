@@ -121,7 +121,6 @@ Jalankan command ini untuk generate report dengan maven
 - Summary dari masing-masing class test akan ditampilkan. Summary ini mencakup jumlah test case yang dieksekusi, jumlah error, failure, skipped, dan juga success rate serta time.
 
 **3. Test Result CreateTest**
-
 ![p3](https://github.com/suciawalia/API-Testing/assets/99374578/62e47d00-b411-4ef0-918f-15f0319fd35e)
 
 - Test report menunjukkan bahwa terdapat enam test case yang dieksekusi pada Class CreateTest, yaitu 'createUserWithInvalidAppId', 'createUserWithFutureDateOfBirth', 'createUserWithoutAppId', 'createUserWithInvalidEmailFormat', 'createUserWithRequiredFieldsAndValidEmailFormat' dan 'createUserWithInvalidGender'.
