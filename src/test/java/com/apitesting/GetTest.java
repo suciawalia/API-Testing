@@ -15,7 +15,7 @@ public class GetTest {
  
     @Test
     @DisplayName ("TC2-01 Request GET data id user yang terdaftar pada sistem tanpa menambahkan app-id pada headers")
-    public void validUserIdNoAppId() {
+    public void getValidUserIdNoAppId() {
 
         given()
             .get("/user/60d0fe4f5311236168a109fa").
@@ -27,7 +27,7 @@ public class GetTest {
 
     @Test
     @DisplayName ("TC2-03 Request GET data id user yang terdaftar pada sistem dengan menambahkan app-id yang salah pada headers")
-    public void validUserIdInvalidAppId() {
+    public void getValidUserIdInvalidAppId() {
 
         String appId = "662ca6cad9ec7557d41a378";
 
@@ -43,7 +43,7 @@ public class GetTest {
 
     @Test
     @DisplayName ("TC2-05 Request GET data id user yang tidak terdaftar pada sistem dengan menambahkan app-id yang valid pada headers")
-    public void invalidUserIdValidAppId() {
+    public void getInvalidUserIdValidAppId() {
 
         String appId = "662ca6cad9ec7557d41a378a";
 
@@ -59,7 +59,7 @@ public class GetTest {
     
     @Test
     @DisplayName ("TC2-06 Request GET data id user yang terdaftar pada sistem dengan menambahkan app-id yang valid pada headers")
-    public void validUserIdValidAppId() {
+    public void getValidUserIdValidAppId() {
 
         String appId = "662ca6cad9ec7557d41a378a";
 
@@ -90,7 +90,7 @@ public class GetTest {
 
     @Test
     @DisplayName ("TC2-07 Request GET data id user dengan format yang tidak valid dengan menambahkan app-id yang valid pada headers")
-    public void invalidUserIdFormatValidAppId() {
+    public void getInvalidUserIdFormatValidAppId() {
 
         String appId = "662ca6cad9ec7557d41a378a";
 
