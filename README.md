@@ -100,7 +100,60 @@ Jalankan command ini untuk generate report dengan maven
 ```
 ..\target\site\surefire-report.html
 ```
+### Hasil Test Report 
+**1. Summary**
 
+![reposrt](https://github.com/suciawalia/API-Testing/assets/99374578/229a4d0f-e748-4890-8e36-0325d0d6bcc6)
+
+- Jumlah test case yang dieksekusi (Tests) adalah 21
+- Jumlah error pada test case (Errors) adalah 0
+- Jumlah test case yang fail (Failures) adalah 3
+- Jumlah test case yang dilewati (Skipped) adalah 0
+- Success Rate nya adalah 85.7%
+- Waktu eksekusi test nya (Time) nya adalah 14.67s
+
+**2. Package List**
+
+![p2](https://github.com/suciawalia/API-Testing/assets/99374578/81803d6d-ecc6-430d-b675-58eec68ca026)
+
+- Package yang di test adalah package "com.apitesting"
+- Berdasarkan gambar diatas, test report menampilkan empat class test yang dijalankan pada proses ini, yaitu CreateTest, DeleteTest, GetTest, dan UpdateTest.
+- Summary dari masing-masing class test akan ditampilkan. Summary ini mencakup jumlah test case yang dieksekusi, jumlah error, failure, skipped, dan juga success rate serta time.
+
+**3. Test Result CreateTest**
+
+![p8](https://github.com/suciawalia/API-Testing/assets/99374578/1bff55db-66c3-4044-b345-264cbfdefac8)
+
+- Test report menunjukkan bahwa terdapat enam test case yang dieksekusi pada Class CreateTest, yaitu 'createUserWithInvalidAppId', 'createUserWithFutureDateOfBirth', 'createUserWithoutAppId', 'createUserWithInvalidEmailFormat', 'createUserWithRequiredFieldsAndValidEmailFormat' dan 'createUserWithInvalidGender'.
+- Test report menunjukkan bahwa terdapat 1 test case yang fail, yaitu 'createUserWithRequiredFieldsAndValidEmailFormat', ditandai dengan adanya keterangan ' + [Detail] ' di sebelah test case name yang akan menampilkan detail failure dari test case tersebut.
+
+**4. Test Result DeleteTest**
+
+![p4](https://github.com/suciawalia/API-Testing/assets/99374578/f407fccf-a751-45d9-af6c-a2dc1b4d5b12)
+
+- Test report menunjukkan bahwa terdapat lima test case yang dieksekusi pada Class DeleteTest, yaitu 'deleteInvalidUserIdInvalidAppId', 'deleteInvalidUserIdFormatValidAppId', 'deleteInvalidUserIdNoAppId', 'deleteInvalidUserIdValidAppId', dan 'deleteValidUserIdValidAppId'.
+- Test report menunjukkan bahwa terdapat 1 test case yang fail, yaitu 'deleteValidUserIdValidAppId', ditandai dengan adanya keterangan ' + [Detail] ' di sebelah test case name yang akan menampilkan detail failure dari test case tersebut.
+
+**5. Test Result GetTest**
+
+![p5](https://github.com/suciawalia/API-Testing/assets/99374578/e979d023-b4db-4539-b411-7081982d3669)
+
+- Test report menunjukkan bahwa terdapat lima test case yang dieksekusi pada Class GetTest, yaitu 'getValidUserIdInvalidAppId', 'getValidUserIdValidAppId', 'getInvalidUserIdValidAppId', 'getInvalidUserIdFormatValidAppId', dan 'getValidUserIdNoAppId'.
+- Test report menunjukkan bahwa tidak terdapat test case yang fail
+
+**6. Test Result UpdateTest**
+
+![p6](https://github.com/suciawalia/API-Testing/assets/99374578/f85a4431-e5e4-418d-808a-f5d4a4594c6e)
+
+- Test report menunjukkan bahwa terdapat lima test case yang dieksekusi pada Class UpdateTest, yaitu 'updateTitleMissWithValidUserIdAndAppId', '	updateTitleWithInvalidValue', 'updateTitleMrsWithValidUserIdAndAppId', 'updateTitleMsWithValidUserIdAndAppId', dan 'updateTitleMrWithValidUserIdAndAppId'.
+- Test report menunjukkan bahwa terdapat 1 test case yang fail, yaitu 'updateTitleWithInvalidValue', ditandai dengan adanya keterangan ' + [Detail] ' di sebelah test case name yang akan menampilkan detail failure dari test case tersebut.
+
+**7. Failure Details**
+
+![p7](https://github.com/suciawalia/API-Testing/assets/99374578/68b7d59a-bd03-478d-90a4-a13fbdddb772)
+
+- Failure details menunjukkan test case yang fail, mencakup keterangan penyebab fail dan class serta line pada class tersebut yang menyebabkan fail. Failures details ini kumpulan dari test case yang fail dari semua class
+  
 ## Authors
 - 211524001 | Adinda Faayza Malika [@adindafaayza](https://github.com/adindafaayza)
 - 211524003 | Annisa Dinda Gantini [@annisaadg](https://github.com/annisaadg)
