@@ -18,8 +18,10 @@ Pengujian API menggunakan Postman (manual) dan Rest Assured (otomatis) pada Prog
 │       └── java
 │           └── com
 │               └── apitesting
+│                   ├── CreateTest.java
 │                   ├── DeleteTest.java
-│                   └── GetTest.java
+│                   ├── GetTest.java
+│                   └── UpdateTest.java
 ├── target
 │   ├── classes/com/apitesting
 │   │   └── ....
