@@ -26,5 +26,36 @@ public class CreateTest {
             .body("error", equalTo("APP_ID_MISSING"));
  
     }
+
+    @Test
+    @DisplayName("Request CREATE user dengan gender invalid")
+    public void createUserWithInvalidGender() {
+
+        given()
+            .header("app-id", "662e68fabb70a7086a25966e")
+            .contentType("application/json")
+            .body("{\"firstName\":\"Soohyun\",\"lastName\":\"Kim\",\"gender\":\"Laki-Laki\",\"email\":\"soohyun@gmail.com\"}")
+            .post("/user/create").
+        then()
+            .statusCode(400)
+            .body("error", equalTo("BODY_NOT_VALID"));
+ 
+    }
+
+    @Test
+    @DisplayName("Request CREATE user dengan data required field dan valid format email")
+    public void createUserWithRequiredFieldsAndValidEmailFormat() {
+
+        given()
+            .header("app-id", "662e68fabb70a7086a25966e")
+            .contentType("application/json")
+            .body("{\"firstName\":\"Ai Alexander Ashya Amber Kimberly Christy Jocelyns\",\"lastName\":\"Jocie\",\"email\":\"aijocie14@gmail.com\"}")
+            .post("/user/create").
+        then()
+            .statusCode(200)
+            .body("firstName", equalTo("Ai Alexander Ashya Amber Kimberly Christy Jocelyns"))
+            .body("lastName", equalTo("Jocie"))
+            .body("email", equalTo("aijocie14@gmail.com"));
+    }
     
 }
