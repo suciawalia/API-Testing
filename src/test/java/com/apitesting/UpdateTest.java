@@ -87,18 +87,17 @@ public class UpdateTest {
     }
 
     @Test
-    @DisplayName("TC3-10 Melakukan update user pada field title diisi \"dr\"")
-    public void updateTitleDrWithValidUserIdAndAppId() {
+    @DisplayName("TC3-31 Melakukan update user pada field title dengan format yang salah, yaitu diisi angka")
+    public void updateTitleWithInvalidValue() {
         
         given()
             .contentType(ContentType.JSON)
             .header("app-id", appId)
-            .body("{\"title\": \"dr\"}")
+            .body("{\"title\": \"55\"}")
             .when()
             .put("/user/" + userId)
         .then()
-            .statusCode(200)
-            .body("id", equalTo(userId))
-            .body("title", equalTo("dr"));
+            .statusCode(400)
+            .body("error", equalTo("BODY_NOT_VALID"));
     }
 }
